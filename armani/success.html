@@ -1,0 +1,251 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<meta http-equiv="X-UA-Compatible" content="ie=edge">  
+<title>填写信息</title>  
+    <style>  
+        html, body {    
+	        height: 100%;  
+	        margin: 0;     
+	    }    
+	        body {    
+
+	            background-image: url('images/1164f5a9a23bc67529be10d5fb84051e.png');   
+
+	            background-size: cover;  
+
+	            background-position: center;   
+
+	        }    
+
+	        h1{  
+
+	            color: aliceblue;  
+
+	            text-align: center;  
+
+	        }  
+
+	        a {  
+
+	            text-decoration: none;  
+
+	            color: inherit;  
+
+	        }  
+
+	        .colortxt{  
+
+	            font-size: 30px;  
+
+	            background: orange;  
+
+	            -webkit-background-clip: text;  
+
+	            color: transparent;  
+
+	            text-align: center;  
+
+	            float: right;  
+
+	        }  
+
+	  
+
+	        table{  
+
+	            text-align: center;  
+
+	            color: white;  
+
+	            margin: auto;  
+
+	            font-size: 30px;  
+
+	        }  
+
+	        input{  
+
+	            height: 30px;  
+
+	            width: 200px;  
+
+	            background-color: transparent;   
+
+	            -webkit-text-fill-color: white;   
+
+	            font-size: 30px;  
+
+	        }  
+
+	        button{  
+
+	            text-align: center;  
+
+	            background-color: coral;  
+
+	            width: 150px;  
+
+	            height: 50px;  
+
+	            border-radius: 12px;  
+
+	            margin-top: 30px;  
+
+	        }  
+
+	        #error-message {  
+
+	            color: white;  
+
+	            text-align: center;  
+
+	            margin-top: 20px;  
+
+	        }  
+
+	    </style>  
+
+	</head>  
+
+	<body>  
+
+	    <h1>请确认你的信息</h1>  
+
+	    <table>   
+
+	        <tr>  
+
+	            <td>姓名：</td>  
+
+	            <td><input type="text" id="name"></td>  
+
+	        </tr>  
+
+	        <tr>  
+
+	            <td>地址：</td>  
+
+	            <td><input type="text" id="address"></td>  
+
+	        </tr>  
+
+	        <tr>  
+
+	            <td>城市：</td>  
+
+	            <td><input type="text" id="city"></td>  
+
+	        </tr>  
+
+	        <tr>  
+
+	            <td>邮政编码：</td>  
+
+	            <td><input type="text" id="postalCode"></td>  
+
+	        </tr>  
+
+	        <tr>  
+
+	            <td>联系电话：</td>  
+
+	            <td><input type="text" id="phone"></td>  
+
+	        </tr>  
+
+	        <tr>  
+
+	            <td>邮箱：</td>  
+
+	            <td><input type="text" id="game"></td>  
+
+	        </tr>  
+
+	    </table>  
+
+	    <center><button onclick="validateForm()">提交</button></center>
+
+	    <div id="error-message"></div>  
+
+	  
+
+	    <script>  
+
+	        function validateForm() {  
+
+	            var name = document.getElementById('name').value;  
+
+	            var address = document.getElementById('address').value;  
+
+	            var city = document.getElementById('city').value;  
+
+	            var postalCode = document.getElementById('postalCode').value;  
+
+	            var phone = document.getElementById('phone').value;  
+
+	            var game = document.getElementById('game').value;  
+
+	  
+
+	            var errorMessage = "";  
+
+	  
+
+	            if (name === "") {  
+
+	                errorMessage += "姓名不能为空。<br>";  
+
+	            }  
+
+	            if (address === "") {  
+
+	                errorMessage += "地址不能为空。<br>";  
+
+	            }  
+
+	            if (city === "") {  
+
+	                errorMessage += "城市不能为空。<br>";  
+
+	            }  
+
+	            if (postalCode === "") {  
+
+	                errorMessage += "邮政编码不能为空。<br>";  
+
+	            }  
+
+	            if (phone === "") {  
+
+	                errorMessage += "联系电话不能为空。<br>";  
+
+	            }  
+
+	            if (game === "") {  
+
+	                errorMessage += "游戏不能为空。<br>";  
+
+	            }  
+
+	  
+
+	            if (errorMessage !== "") {  
+
+	                document.getElementById('error-message').innerHTML = errorMessage;  
+
+	            } else {  
+
+	                window.location.href = "success1.html";  
+
+	            }  
+
+	        }  
+
+	    </script>  
+
+	</body>  
+
+	</html>
